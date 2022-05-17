@@ -28,7 +28,6 @@
     flex-wrap: wrap;
     gap: 75px;
     width: 90%;
-    margin: 100px auto 100px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

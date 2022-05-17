@@ -1,8 +1,14 @@
 <template>
   <div class="body">
-    <NuxtLink class="c-nuxt-link"></NuxtLink>
-    <Nuxt class="cp-nuxt" />
-    <footer>test</footer>
+    <header>
+      <NuxtLink class="nuxt-link" />
+    </header>
+
+    <main>
+      <Nuxt />
+    </main>
+
+    <footer>t</footer>
   </div>
 </template>
 
@@ -16,17 +22,20 @@
 
 </script>
 
-<style>
+<style lang="scss">
   .body {
-    width: 100vw;
+    width: 100%;
   }
 
-  .c-nuxt-link {
-    margin-top: 50px;
+  header {
+    z-index: 100;
+    position: fixed;
+    top: 15px;
+    left: 75px;
   }
 
-  .cp-nuxt {
-    margin-bottom: 50px;
+  footer {
+    margin-top: 1500px;
   }
 
   .page-enter-active {

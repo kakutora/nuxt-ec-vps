@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   h1 {
     margin-top: 250px;
     text-align: center;
