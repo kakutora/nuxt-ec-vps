@@ -15,14 +15,12 @@
     </div>
 
     <div class="recommended">
-      <h2 data-aos="flip-up">Recommended Item</h2>
-      <div class="recommended__box" data-aos="zoom-in">
+      <h2 data-aos="flip-up" data-aos-offset="200">Recommended Item</h2>
+      <div class="recommended__box" data-aos="zoom-in" data-aos-offset="600">
         <RecommendedItem v-for="testItem in dummyRecItems" :key="testItem.id" :data="testItem">
         </RecommendedItem>
       </div>
     </div>
-
-
   </div>
 </template>
 
@@ -42,14 +40,13 @@
       RecommendedItem
     },
     data() {
-      return {
-      }
+      return {}
     },
     computed: {
-      dummyRecItems(){
+      dummyRecItems() {
         return this.$store.state.testItems
       },
-      hooperSets(){
+      hooperSets() {
         return this.$store.state.hooperSets
       }
     }
@@ -72,12 +69,18 @@
     }
 
     &__title-content {
+      display: flex;
+      
       background: #EFEAD8;
     }
 
-    &__title-text {}
+    &__title-text {
+      text-align: center;
+    }
 
-    &__title-desc {}
+    &__desc-text {
+      text-align: center;
+    }
 
     .hooper {
       background-color: #62caaa;

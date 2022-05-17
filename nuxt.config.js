@@ -9,6 +9,10 @@ export default {
         charset: 'utf-8'
       },
       {
+        'http-equiv': 'content-language',
+        content: "ja"
+      },
+      {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1'
       },
@@ -36,7 +40,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/vue-prix',
-  { src: '@/plugins/vue-aos', ssr: false },
+    {
+      src: '@/plugins/vue-aos',
+      ssr: false
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

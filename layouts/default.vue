@@ -30,8 +30,10 @@
   header {
     z-index: 100;
     position: fixed;
-    top: 15px;
-    left: 75px;
+    top: 25px;
+    left: 35px;
+    background: #000000bf;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.4);
   }
 
   footer {
