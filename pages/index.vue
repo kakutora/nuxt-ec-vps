@@ -17,7 +17,7 @@
     <div class="recommended">
       <h2 data-aos="flip-up">Recommended Item</h2>
       <div class="recommended__box" data-aos="zoom-in">
-        <RecommendedItem v-for="testItem in testItems" :key="testItem.id" :data="testItem">
+        <RecommendedItem v-for="testItem in dummyRecItems" :key="testItem.id" :data="testItem">
         </RecommendedItem>
       </div>
     </div>
