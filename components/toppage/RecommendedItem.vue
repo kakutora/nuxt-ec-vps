@@ -2,13 +2,13 @@
   <div class="recommended__item" :class="'recommended__item--grid-' + data.id" @mouseenter="bool = !bool"
     @mouseleave="bool = !bool">
     <div class="recommended__desc">
-      <h2>{{ data.itemname }}</h2>
+      <h2>{{ data.itemDesc }}</h2>
     </div>
-    
+
     <div class="recommended__image recommended__image--before-translate"
       :class="['recommended__image--temp-' + data.id, 'recommended__image--before-translate-' + data.id, bool ? 'recommended__image--after-translate-' + data.id: '']">
       <!--tempクラスは画像入れたら消す-->
-      <h2>{{ data.itemimage }}</h2>
+      <h2><img class="recommended__test" :src="require('@/assets/image/RecommendedImages/' + data.itemImageSrc + '.jpg')" alt=""></h2>
     </div>
   </div>
 </template>
@@ -67,6 +67,9 @@
       transition: transform .3s ease;
 
       h2 {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
         font-size: 30px;
         color: #fafafa
       }
@@ -118,6 +121,11 @@
       &--after-translate-4 {
         transform: translateY(0%)
       }
+    }
+    &__test{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 

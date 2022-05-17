@@ -10,13 +10,15 @@
       </div>
       <div class="home__title-content">
         <h2 class="home__title-text">Camp Fire</h2>
-        <p class="home__desc-text">dummydummydummy</p>
+        <p class="home__desc-text">
+          dummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummy
+        </p>
       </div>
     </div>
 
     <div class="recommended">
-      <h2 data-aos="flip-up" data-aos-offset="200">Recommended Item</h2>
-      <div class="recommended__box" data-aos="zoom-in" data-aos-offset="600">
+      <h2 class="recommended__title-text" v-prlx="{ direction: 'x',speed: 1.5,fromBottom: true }">Recommended Item</h2>
+      <div class="recommended__boxes" data-aos="zoom-in" data-aos-offset="300">
         <RecommendedItem v-for="testItem in dummyRecItems" :key="testItem.id" :data="testItem">
         </RecommendedItem>
       </div>
@@ -70,16 +72,21 @@
 
     &__title-content {
       display: flex;
-      
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 175px;
       background: #EFEAD8;
     }
 
     &__title-text {
-      text-align: center;
+      font-size: 40px;
     }
 
     &__desc-text {
-      text-align: center;
+      width: 60%;
+      font-size: 16px;
+      overflow-wrap: break-word;
     }
 
     .hooper {
@@ -91,30 +98,31 @@
 
   .recommended {
     overflow: hidden;
+    position: relative;
     width: 100%;
-    margin-top: 50vh;
 
-    &__box {
-      display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 50% 50%;
-      width: 100%;
-      height: 100vh;
-    }
-
-    h2 {
+    &__title-text {
       display: grid;
       place-items: center;
       width: 450px;
       height: 75px;
-      margin: 0 auto;
-      margin-bottom: 150px;
+      //margin: 0 auto;
+      margin-top: 200px;
+      margin-bottom: 200px;
       background: #eeeeee;
       font-size: 26px;
       box-shadow:
         0 20px 0 -10px rgb(198, 224, 231),
         0 40px 0 -20px rgb(105, 171, 209),
         0 60px 0 -30px rgb(27, 115, 165)
+    }
+
+    &__boxes {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 50% 50%;
+      width: 100%;
+      height: 100vh;
     }
   }
 
