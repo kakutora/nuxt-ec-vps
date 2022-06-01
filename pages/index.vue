@@ -9,9 +9,11 @@
         </hooper>
       </div>
       <div class="home__title-content">
-        <h2 class="home__title-text">Camp Fire</h2>
+        <h2 class="home__title-text">Camp Site</h2>
         <p class="home__desc-text">
-          dummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummydummy
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nulla optio eos totam quae atque error
+          sunt. Blanditiis laudantium, ullam voluptas, voluptatibus harum, cupiditate illum labore vero dolor enim
+          deleniti.
         </p>
       </div>
     </div>
@@ -22,6 +24,28 @@
         <RecommendedItem v-for="testItem in dummyRecItems" :key="testItem.id" :data="testItem">
         </RecommendedItem>
       </div>
+    </div>
+
+    <div class="recommended mrbt">
+      <h2 class="recommended__title-text rev" v-prlx="{ direction: 'x',speed: 1.5,fromBottom: true, reverse: true}">
+        Popular Item</h2>
+      <div class="recommended__boxes" data-aos="zoom-in" data-aos-offset="300">
+        <RecommendedItem v-for="testItem in dummyRecItems" :key="testItem.id" :data="testItem">
+        </RecommendedItem>
+      </div>
+    </div>
+
+    <div class="newsbox" data-aos="zoom-in" data-aos-offset="300">
+      <p class="news1">News</p>
+      <p class="news2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit fuga alias
+        rerum repellat, ullam mollitia at quod debitis nisi. Sapiente aliquid necessitatibus nisi rerum magnam! Numquam
+        quidem autem nisi.</p>
+        <p class="news2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit fuga alias
+        rerum repellat, ullam mollitia at quod debitis nisi. Sapiente aliquid necessitatibus nisi rerum magnam! Numquam
+        quidem autem nisi.</p>
+        <p class="news2 un">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit fuga alias
+        rerum repellat, ullam mollitia at quod debitis nisi. Sapiente aliquid necessitatibus nisi rerum magnam! Numquam
+        quidem autem nisi.</p>
     </div>
   </div>
 </template>
@@ -57,6 +81,31 @@
 </script>
 
 <style scoped lang="scss">
+  .newsbox {
+    width: 55vw;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .news1 {
+    text-align: center;
+    font-size: 18px;
+
+    border-bottom: 1px solid black;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+  }
+
+  .news2 {
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 45px;
+  }
+  .un{
+    margin-bottom: 300px;
+  }
+
   .home {
     display: grid;
     grid-template-columns: 70% 30%;
@@ -66,7 +115,7 @@
 
     &__top-image {
       img {
-        max-height: 100%;
+        height: 100%;
       }
     }
 
@@ -105,16 +154,16 @@
       display: grid;
       place-items: center;
       width: 450px;
-      height: 75px;
+      height: 125px;
       //margin: 0 auto;
       margin-top: 200px;
       margin-bottom: 200px;
       background: #eeeeee;
-      font-size: 26px;
+      font-size: 28px;
       box-shadow:
-        0 20px 0 -10px rgb(198, 224, 231),
-        0 40px 0 -20px rgb(105, 171, 209),
-        0 60px 0 -30px rgb(27, 115, 165)
+        0 20px 0 -10px #7F8487,
+        0 40px 0 -20px #354259 //,
+        //0 60px 0 -30px rgb(27, 115, 165)
     }
 
     &__boxes {
@@ -124,6 +173,14 @@
       width: 100%;
       height: 100vh;
     }
+  }
+
+  .rev {
+    margin-left: auto;
+  }
+
+  .mrbt {
+    margin-bottom: 250px;
   }
 
 </style>

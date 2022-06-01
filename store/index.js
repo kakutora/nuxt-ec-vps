@@ -15,7 +15,23 @@ export const state = () => ({
     id: 4,
     itemDesc: 'Item_Desc_4',
     itemImageSrc: 'Recommended_Item_4'
-  }],
+  }/*, {
+    id: 5,
+    itemDesc: 'Item_Desc_5',
+    itemImageSrc: 'Recommended_Item_5'
+  }, {
+    id: 6,
+    itemDesc: 'Item_Desc_6',
+    itemImageSrc: 'Recommended_Item_6'
+  }, {
+    id: 7,
+    itemDesc: 'Item_Desc_7',
+    itemImageSrc: 'Recommended_Item_7'
+  }, {
+    id: 8,
+    itemDesc: 'Item_Desc_8',
+    itemImageSrc: 'Recommended_Item_8'
+  }*/],
   hooperSets: {
     autoPlay: true,
     playSpeed: 5000,
@@ -23,5 +39,15 @@ export const state = () => ({
     mouseDrag: false,
     touchDrag: false,
     wheelControl: false
+  },
+  value: 0
+});
+
+export const mutations = {
+  increment (state) {
+    state.value = 1
+  },
+  increment2 (state) {
+    state.value = 0
   }
-})
+}

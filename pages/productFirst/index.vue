@@ -28,6 +28,7 @@
     flex-wrap: wrap;
     gap: 75px;
     width: 90%;
+    margin: 200px auto 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

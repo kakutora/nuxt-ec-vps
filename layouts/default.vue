@@ -8,7 +8,7 @@
       <Nuxt />
     </main>
 
-    <footer>t</footer>
+    <footer>&nbsp;</footer>
   </div>
 </template>
 
@@ -31,13 +31,15 @@
     z-index: 100;
     position: fixed;
     top: 25px;
-    left: 35px;
-    background: #000000bf;
-    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.4);
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
   }
 
   footer {
-    margin-top: 1500px;
+    width: 100%;
+    height: 25px;
+    background: #1a1a1a;
   }
 
   .page-enter-active {
