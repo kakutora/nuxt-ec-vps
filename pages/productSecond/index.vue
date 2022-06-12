@@ -1,17 +1,39 @@
 <template>
-  <div class="about">
-    <h1>This is a Product 2 page</h1>
+  <div class="productlist">
+    <product-box v-for="val in dummyJsonVue" :key="val.id" :val="val"></product-box>
   </div>
 </template>
 
 <script>
-export default {
-}
+  import dummyJson from '@/assets/MOCK_DATA.json'
+  import ProductBox from '@/components/ProductBox.vue'
+
+  export default {
+    data() {
+      return {
+        dummyJsonVue: dummyJson
+      }
+    },
+    components: {
+      ProductBox
+    }
+  }
+
 </script>
 
 <style scoped lang="scss">
-  h1 {
-    margin-top: 250px;
-    text-align: center;
+  .productlist {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 75px;
+    width: 90%;
+    margin: 200px auto 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+  .productlist::-webkit-scrollbar {
+      display: none;
+    }
+
 </style>
